@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :blogs
+  root 'blogs#index' #トップページをblogsコントローラのindexアクションに設定
+  
   get 'blogs/index'
   get 'blogs', to: 'blogs#index'
   get 'blogs/:page', to: 'blogs#index'
